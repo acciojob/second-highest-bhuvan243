@@ -10,8 +10,8 @@
 	<script>
 		function secondHighest(arr) {
 			// check for empty array and single element array
-			if (arr.length === 0 || arr.length === 1){
-				return 'undefined';
+			if (arr.length < 2){
+				return '-Infinity';
 			}
 			else{ // check for all the values to be same or not
 				let isAllSame = true;
@@ -22,7 +22,7 @@
 					}
 				}
 				if (isAllSame === true){
-					return 'undefined';
+					return '-Infinity';
 				}
 			}
 			let largeElement = arr[0], secondLargest = arr[0];
