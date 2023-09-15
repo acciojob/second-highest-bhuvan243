@@ -9,8 +9,33 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+			// check for empty array and single element array
+			if (arr.length === 0 || arr.length === 1){
+				return "-Infinity";
+			}
+			else{ // check for all the values to be same or not
+				let isAllSame = true;
+				for (let i=1; i<arr.length; i++){
+					if (arr[i] != arr[0]){
+						isAllSame = false;
+						break;
+					}
+				}
+				if (isAllSame === true){
+					return "-Infinity";
+				}
+			}
+			let largeElement = arr[0], secondLargest = arr[0];
+			for (let i=1; i<arr.length; i++){
+				if (arr[i] > largeElement){
+					secondLargest = largeElement;
+					largeElement = arr[i];
+				}
+				else if (arr[i] > secondLargest){
+					secondLargest = arr[i];
+				}
+			}
+			return secondLargest;
 		}
 
 		function Main() {
