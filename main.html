@@ -11,7 +11,7 @@
 		function secondHighest(arr) {
 			// check for empty array and single element array
 			if (arr.length === 0 || arr.length === 1){
-				return undefined;
+				return 'undefined';
 			}
 			else{ // check for all the values to be same or not
 				let isAllSame = true;
@@ -22,7 +22,7 @@
 					}
 				}
 				if (isAllSame === true){
-					return undefined;
+					return 'undefined';
 				}
 			}
 			let largeElement = arr[0], secondLargest = arr[0];
@@ -38,14 +38,14 @@
 			return secondLargest;
 		}
 
-		// function Main() {
-		// 	var n = prompt("Enter the number of elements");
-		// 	var arr = [];
-		// 	for (var i = 0; i < n; i++) {
-		// 		arr[i] = prompt("Enter element " + (i+1));
-		// 	}
-		// 	alert(secondHighest(arr));
-		// }
+		function Main() {
+			var n = prompt("Enter the number of elements");
+			var arr = [];
+			for (var i = 0; i < n; i++) {
+				arr[i] = prompt("Enter element " + (i+1));
+			}
+			alert(secondHighest(arr));
+		}
 		Main();
 	</script>
 
